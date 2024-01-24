@@ -1,0 +1,14 @@
+R1:
+  hostname: 172.16.100.9
+  groups:
+    - snr
+
+R2:
+  hostname: 172.16.125.11
+  groups:
+    - snr
+
+R3:
+  hostname: 172.16.125.12
+  groups:
+    - snr
