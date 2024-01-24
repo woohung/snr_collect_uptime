@@ -1,0 +1,10 @@
+snr:
+  platform: cisco_iosxe
+  username: your_username
+  password: your_password
+  connection_options:
+    scrapli:
+      port: 22
+      extras:
+        ssh_config_file: True
+        auth_strict_key: False
