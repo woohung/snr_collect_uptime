@@ -65,15 +65,15 @@ def format_uptime(device_info):
     return f"Device {host} uptime is {weeks} weeks, {days} days, {hours} hours, {minutes} minutes."
 
 
-def collect_devices_info(result):
+def collect_devices_info(task):
     '''
     Собирает информацию о времени работы устройств из результатов выполнения задач.
 
-    :param result: Результат выполнения задач Nornir
+    :param task: Результат выполнения задач Nornir
     :return: Список кортежей (хост, время работы в минутах)
     '''
     devices_info = []
-    for host, task_result in result.items():
+    for host, task_result in task.items():
         uptime_minutes = task_result.result
         if uptime_minutes is not None:
             devices_info.append((host, uptime_minutes))
