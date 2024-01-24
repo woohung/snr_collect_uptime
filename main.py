@@ -23,7 +23,7 @@ def get_uptime(task):
             command="sh ver",
         )
 
-        current_uptime = get_version.result.strip().split('\n')[-1]
+        current_uptime = get_version.result.split('\n')[-1]
         match_uptime = re.search(regex, current_uptime)
         if match_uptime:
             weeks, days, hours, minutes = map(int, match_uptime.groups())
